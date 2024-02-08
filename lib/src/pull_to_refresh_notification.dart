@@ -231,9 +231,6 @@ class PullToRefreshNotificationState extends State<PullToRefreshNotification>
           math.max(notification.metrics.viewportDimension, maxContainerExtent);
     }
     if (notification is ScrollStartNotification &&
-        (widget.reverse
-            ? notification.metrics.extentAfter == 0.0
-            : notification.metrics.extentBefore == 0.0) &&
         _refreshIndicatorMode == null &&
         _start(notification.metrics.axisDirection)) {
       //setState(() {
